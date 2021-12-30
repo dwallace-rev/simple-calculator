@@ -4,7 +4,7 @@ const display = document.getElementById("numDisplay");
 const history = document.getElementById("history");
 
 let currentEq = "";
-const results = [];
+let results = [];
 
 calculator.addEventListener("click", (event) => {
     const isButton = event.target.nodeName === "BUTTON";
@@ -64,6 +64,9 @@ calculator.addEventListener("click", (event) => {
         case "0b":
             display.value += "0";
             break;
+        case "clearHistory":
+            history.innerHTML = "<h3>Equation History</h3><br>";
+            results = [];
     }
 
 
@@ -73,7 +76,7 @@ function insertVal(n){
     display.innerHTML = n;
 }
 
-const fadeRight = "animate__animated animate__fadeInRight";
+const fadeLeft = "animate__animated animate__fadeInLeft";
 function solve(eq){
     if (eq)
     {
@@ -81,7 +84,7 @@ function solve(eq){
         console.log(`Solve called with value ${eq}`);
 
         history.innerHTML = "<h3>Equation History</h3><br>" 
-            + results.join("") +  `<li class="${fadeRight}">${eq} = ${ans}</li>`;
+            + results.join("") +  `<li class="${fadeLeft}">${eq} = ${ans}</li>`;
         results.push(`<li>${eq} = ${ans}</li>`)
         display.value = `${ans}`;
     }
