@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href = "style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>   
+    <div id="calculator">
+        <input id="numDisplay" readonly></input>
+        <table id="buttons">
+            <tr>
+                <button id="clearBtn">C</button>
+            </tr> <br>
+            <tr>
+                <button id="7b">7</button>
+                <button id="8b">8</button>
+                <button id="9b">9</button>
+                <button id="divBtn" class = "operand">/</button>
+            </tr><br>
+            <tr>
+                <button id="4b">4</button>
+                <button id="5b">5</button>
+                <button id="6b">6</button>
+                <button id="multBtn" class = "operand">*</button>
+            </tr><br>
+            <tr>
+                <button id="1b">1</button>
+                <button id="2b">2</button>
+                <button id="3b">3</button>
+                <button id="minusBtn" class = "operand">-</button>
+            </tr><br>
+            <tr>
+                <button id="0b">0</button>
+                <button id="dotBtn">.</button>
+                <button id="equalBtn">=</button>
+                <button id="plusBtn" class="operand">+</button>
+            </tr>
+
+        </table>
+    </div>
+
+    <div id="history">
+        
+    </div>
+    
+    
+</body>
+
+<script src = "calc-logic.js"></script>
+</html>
